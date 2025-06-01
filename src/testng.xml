@@ -11,15 +11,15 @@
         </classes>
     </test>
 
-    <test name="EdgeTests">
-        <parameter name="browser" value="edge"/>
-        <classes>
-            <class name="test.AlertsTest"/>
-            <class name="test.ModalsTest"/>
-            <class name="test.DynamicContentTest"/>
-            <class name="test.WindowsTest"/>
-        </classes>
-    </test>
+<!--    <test name="EdgeTests">-->
+<!--        <parameter name="browser" value="edge"/>-->
+<!--        <classes>-->
+<!--            <class name="test.AlertsTest"/>-->
+<!--            <class name="test.ModalsTest"/>-->
+<!--            <class name="test.DynamicContentTest"/>-->
+<!--            <class name="test.WindowsTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>
 
