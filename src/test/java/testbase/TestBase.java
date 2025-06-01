@@ -14,6 +14,11 @@ import utils.DriverFactory;
 public class TestBase {
     protected WebDriver driver;
 
+    public static String env = System.getProperty("qa", "uat");
+    public static String browser = System.getProperty("chrome","edge");
+    public static String suite = System.getProperty("@Regression", "@smoke");
+
+
     @Parameters("browser")
     @BeforeMethod
     public void setUp(@Optional("chrome") String browser) {
