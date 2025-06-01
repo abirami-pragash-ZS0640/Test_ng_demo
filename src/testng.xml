@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CrossBrowserSuite" parallel="tests" thread-count="2">
+
+    <test name="ChromeTests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="test.AlertsTest"/>
+            <class name="test.ModalsTest"/>
+            <class name="test.DynamicContentTest"/>
+            <class name="test.WindowsTest"/>
+        </classes>
+    </test>
+
+    <test name="EdgeTests">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="test.AlertsTest"/>
+            <class name="test.ModalsTest"/>
+            <class name="test.DynamicContentTest"/>
+            <class name="test.WindowsTest"/>
+        </classes>
+    </test>
+
+</suite>
+
