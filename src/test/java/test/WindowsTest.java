@@ -1,5 +1,11 @@
 package test;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -11,17 +17,21 @@ import testbase.TestBase;
 
 import java.time.Duration;
 import java.util.Set;
-
+@Epic("Automation Testing for Window Handling")
+@Feature("Window Switching Feature")
 public class WindowsTest extends TestBase {
     @DataProvider(name = "windowTypes")
     public Object[][] windowTypes() {
         return new Object[][] {
-                {"tab", 2},
-                {"separate", 2},
-                {"multiple", 3}  // adjust based on actual behavior
+                {"tab"},
+                {"separate"},
+                {"multiple"}  // adjust based on actual behavior
         };
     }
 
+    @Story("User opens and switches between multiple browser windows")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("This test verifies that browser window switching works correctly for different types: tab, separate, and multiple windows.")
     @Test(dataProvider = "windowTypes", description = "Test window handling for different options")
     public void testWindowHandling(String windowType, int expectedWindowCount) {
         HomePage homePage = new HomePage(driver);
