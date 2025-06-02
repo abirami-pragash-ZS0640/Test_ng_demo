@@ -25,10 +25,10 @@ public class MultipleModalsPage extends ElementUtils {
     @FindBy(xpath = "//div[@id='myModal2']//button[@class='close']")
     private WebElement secondModalCloseBtn;
 
-    @FindBy(xpath="//h4[text()='First Modal']")
+    @FindBy(xpath="(//h4[@class='modal-title'])[2]")
     private WebElement firstModal;
 
-    @FindBy(xpath="//h4[text()='Modal 2']")
+    @FindBy(xpath="(//h4[@class='modal-title'])[3]")
     private WebElement secondModal;
     public MultipleModalsPage(WebDriver driver) {
         super(driver);
@@ -52,7 +52,6 @@ public class MultipleModalsPage extends ElementUtils {
     }
 
     public boolean isFirstModalVisible() {
-        //return firstModal.isDisplayed();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         try {
             wait.until(ExpectedConditions.visibilityOf(firstModal));
@@ -71,7 +70,6 @@ public class MultipleModalsPage extends ElementUtils {
     }
 
     public boolean isSecondModalVisible() {
-       // return secondModal.isDisplayed();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             wait.until(ExpectedConditions.visibilityOf(secondModal));

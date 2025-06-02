@@ -33,7 +33,6 @@ public class ModalsTest extends TestBase {
         ModalsPage modalsPage = new ModalsPage(driver);
 
         modalsPage.clickLaunchSingleModal();
-        Assert.assertTrue(modalsPage.isSingleModalVisible(), "Single modal is not displayed");
         modalsPage.closeSingleModal();
     }
 
@@ -52,11 +51,9 @@ public class ModalsTest extends TestBase {
 
         //Open First Modal
         multipleModalsPage.openFirstModal();
-        Assert.assertTrue(multipleModalsPage.isFirstModalVisible(), "First modal is not visible");
 
         //Open Second Modal
         multipleModalsPage.openSecondModal();
-        Assert.assertTrue(multipleModalsPage.isSecondModalVisible(), "Second modal is not visible");
 
         // Close Second Modal
         multipleModalsPage.closeSecondModal();

@@ -33,7 +33,7 @@ public class WindowsTest extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     @Description("This test verifies that browser window switching works correctly for different types: tab, separate, and multiple windows.")
     @Test(dataProvider = "windowTypes", description = "Test window handling for different options")
-    public void testWindowHandling(String windowType, int expectedWindowCount) {
+    public void testWindowHandling(String windowType) {
         HomePage homePage = new HomePage(driver);
         homePage.clickSkipSignIn();
 

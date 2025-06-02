@@ -20,7 +20,7 @@ public class ModalsPage extends ElementUtils {
     @FindBy(xpath = "//a[@href='#myModal']")
     private WebElement launchSingleModalBtn;
 
-    @FindBy(id = "myModal")
+    @FindBy(xpath="(//h4[@class='modal-title'])[1]")
     private WebElement singleModal;
 
     @FindBy(xpath = "//div[@id='myModal']//a[@class='close']")
