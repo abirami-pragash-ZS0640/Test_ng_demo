@@ -25,6 +25,7 @@ public class SwitchToPage extends ElementUtils {
         PageFactory.initElements(driver, this);
     }
 
+
     public void goToAlertsPage() {
         Actions actions = new Actions(driver);
         actions.moveToElement(moreMenu).perform();
